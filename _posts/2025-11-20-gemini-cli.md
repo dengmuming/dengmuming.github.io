@@ -14,8 +14,8 @@ Gemini Cli 是围绕 Google 的 Gemini 大语言模型开发的命令行工具�
 
 + 支持 1M token上下文内容
 + 占用CPU、内存较低（相对trae）
-+ 开通学生认证简单（可以找@邓木明 开通，需要visa或者paypal卡）
-+ Gemini API标准套餐，每分钟限制2次频率，Gemni Pro限制每日50次回复；
++ 支持学生认证
++ Gemini API标准套餐，每分钟限制2次频率，Gemni-2-Pro限制每日50次回复；Gemin-3-Pro。
 
 ## 二、创建 API Token
 
