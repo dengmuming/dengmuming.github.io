@@ -8,7 +8,7 @@ description: "Google Gemini Cli"
 
 ## 一、什么是 Gemini Cli
 
-<font style="background-color:rgb(255,245,235);">Gemini Cli 是围绕 Google 的 Gemini 大语言模型开发的命令行工具（Command-Line Interface），允许用户通过终端直接与 Gemini 模型交互，无需依赖图形界面。它支持文本生成、对话交互、文档处理等功能，适合开发者或习惯终端操作的用户快速调用 Gemini 的能力，例如生成代码、撰写文档、回答问题等。</font>
+Gemini Cli 是围绕 Google 的 Gemini 大语言模型开发的命令行工具（Command-Line Interface），允许用户通过终端直接与 Gemini 模型交互，无需依赖图形界面。它支持文本生成、对话交互、文档处理等功能，适合开发者或习惯终端操作的用户快速调用 Gemini 的能力，例如生成代码、撰写文档、回答问题等。
 
 优势：
 
@@ -44,7 +44,7 @@ $env:http_proxy="http://127.0.0.1:7898"
 
 #### 3.1.2、方式二：tun模式
 
-佳敬推荐方式，全局生效，cmd窗口不需要配置代理
+全局生效，cmd窗口不需要配置代理。缺点是微信收不到消息或很慢，慎用。
 
 ### 3.2 安装
 
@@ -109,6 +109,7 @@ npx https://github.com/google-gemini/gemini-cli
 ### 4.2、切换模型（限额说明）
 
 + gemini（默认gemini pro）：每日限额50次回复
++ gemini -m gemini-3-pro-preview：免费层级用户没权限，第一层级每天1k次
 + gemini -m gemini-2.5-flash：基本无限制
 
 ### 4.2、统计Token
@@ -121,15 +122,14 @@ npx https://github.com/google-gemini/gemini-cli
 
 ### 5.1、支持历史对话吗？
 
-<font style="background-color:rgb(255,245,235);">不支持，每次运行 npx gemini cli 都会启动一个新的会话，之前的对话历史不会被自动记忆。</font>
+不支持，每次运行 npx gemini cli 都会启动一个新的会话，之前的对话历史不会被自动记忆。
 
 推荐使用标准技术文档方式，用文档记录重要内容，比如日常使用如下：
 
-① 编写技术规范md文件:[项目迁移AI编程指南 (MIGRATION_GUIDE.md)](https://ibi7bln9v8.feishu.cn/wiki/XGV2wJ9XKiCHVbkBCa5cjV9Cn9e)
+① 编写技术规范md文件：GEMINI.md（放项目根目录下）
 
-② 启动Gemini Cli后，输入阅读规范指令：
-
-阅读MIGRATION_GUIDE.md规范; 注意后续使用英文回答，要求涉及迁移的方法需要处理好出入参，比如reqeust或者response的dto，是否存在参数，不存在需要补全。
+② 启动Gemini Cli后，输入交互指令（系统会自动读取GEMINI.md）：
+迁移xxx接口，实现xxx
 
 ### 5.2、fetch failed sending request
 
