@@ -19,8 +19,6 @@ Gemini Cli 是围绕 Google 的 Gemini 大语言模型开发的命令行工具�
 
 ## 二、创建 API Token
 
-可以找我借一个用，就不用自己申请了。
-
 获取 Gemini API 密钥**，**首先需要在 [<font style="color:rgb(36,91,219);">Google AI Studio</font>](https://makersuite.google.com/) 注册并创建 API 密钥，用于调用 Gemini 模型。
 
 ## 三、安装 Gemini Cli
