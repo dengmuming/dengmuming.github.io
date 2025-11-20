@@ -2,3 +2,19 @@
 layout: home
 # Index page
 ---
+
+<div class="refresh-toolbar" style="margin: 1.5rem 0; text-align: right">
+  <button id="manual-refresh" class="btn" type="button">刷新页面</button>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var refreshButton = document.getElementById("manual-refresh");
+    if (!refreshButton) {
+      return;
+    }
+    refreshButton.addEventListener("click", function () {
+      window.location.reload();
+    });
+  });
+</script>
